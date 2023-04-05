@@ -24,4 +24,6 @@ add_action( 'elementor/widgets/register', 'register_tabsExtended_elementor_widge
 function register_tabsExtended_elementor_widgets( $widgets_manager ) {
 	require_once( __DIR__ . '/inc/tabs.php' );
 	$widgets_manager->register( new \tabsExtended_widget_elementor );
+	require_once( __DIR__ . '/inc/text-editor.php' );
+	$widgets_manager->register( new \Widget_Text_Editor_extended );
 }
